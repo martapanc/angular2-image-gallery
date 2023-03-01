@@ -16,13 +16,13 @@
 
 
 .galleryContainer img:hover
-    -webkit-filter: brightness(50%)
-    filter: brightness(50%)
+    -webkit-filter: brightness(85%)
+    filter: brightness(85%)
     transition: all ease-out 0.2s
     cursor: pointer
 
 
-.imagerow
+.image-row
     margin-right: 1px
     overflow: hidden
     display: flex
@@ -35,8 +35,8 @@
 .asyncLoadingContainer
     position: absolute
     background-color: transparent
-    height: 0px
-    width: 0px
+    height: 0
+    width: 0
     bottom: 120px
 
 
@@ -76,4 +76,27 @@
 .pager.right
     float: right
 
+.thumbnail
+    display: block
 
+.image-thumbnail
+    position: relative
+
+.image-thumbnail__text
+    transition: 0.3s ease
+    opacity: 0
+    float: left
+    position: absolute
+    left: 15px
+    bottom: 10px
+    z-index: 10
+    background-color: rgba(52, 51, 51, 0.5)
+    color: #fff
+    font-weight: bold
+    font-size: 16px
+    padding: 10px 20px
+    text-align: center
+    max-width: 90%
+
+.image-thumbnail:hover .image-thumbnail__text
+    opacity: 1

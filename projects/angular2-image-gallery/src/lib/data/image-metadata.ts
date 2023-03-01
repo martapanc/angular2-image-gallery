@@ -1,5 +1,6 @@
 export type ImageMetadata = {
   name: string
+  alt: string
   date: string
   dominantColor?: string
   resolutions: {
@@ -8,5 +9,7 @@ export type ImageMetadata = {
       width: number
       height: number
     }
-  }
+  },
+  viewerImageLoaded?: boolean
+  srcAfterFocus?: string
 }

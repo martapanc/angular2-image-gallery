@@ -8,12 +8,14 @@
         <img #imageElement
              class="thumbnail"
              [alt]="image.alt"
+             [src]="image.srcAfterFocus"
+             (click)="viewerEnabled && openImageViewer(image)"
+             [style.cursor]="viewerEnabled ? 'pointer' : 'default'"
              [style.width.px]="image.width"
              [style.height.px]="image.height"
-             (click)="openImageViewer(image)"
-             [src]="image.srcAfterFocus"
              [style.background]="image.dominantColor"
-             [style.margin-right.px]="calcImageMargin()" />
+             [style.margin-right.px]="calcImageMargin()"
+        />
 
         <div class="image-thumbnail__text"
              [style.font-size]="image.alt.length > 45 ? '15px' : '16px'">
